@@ -56,3 +56,14 @@ def decrypt_vigenere(ciphertext, keyword):
 cipher_type = input("Do you want to use Caesar or Vigenere cipher? (Enter 'c' for Caesar or 'v' for Vigenere): ")
 action = input("Do you want to encrypt or decrypt text? (Enter 'e' for encrypt or 'd' for decrypt): ")
 text = input("Enter text: ")
+#Якщо користувач вибрав шифр Цезаря:
+if cipher_type == 'c':
+    shift = int(input("Enter shift value: "))
+    if action == 'e':
+        result = encrypt_caesar(text, shift)
+        print(f"Encrypted text: {result}")
+    elif action == 'd':
+        result = decrypt_caesar(text, shift)
+        print(f"Decryptedtext: {result}")
+    else:
+        print("Invalid action. Please enter 'e' for encrypt or 'd' for decrypt.")
