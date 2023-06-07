@@ -52,3 +52,7 @@ def decrypt_vigenere(ciphertext, keyword):
         else:
             decrypted_text += char
     return decrypted_text
+#Дізнаємось що саме хоче користувач:
+cipher_type = input("Do you want to use Caesar or Vigenere cipher? (Enter 'c' for Caesar or 'v' for Vigenere): ")
+action = input("Do you want to encrypt or decrypt text? (Enter 'e' for encrypt or 'd' for decrypt): ")
+text = input("Enter text: ")
