@@ -67,3 +67,14 @@ if cipher_type == 'c':
         print(f"Decryptedtext: {result}")
     else:
         print("Invalid action. Please enter 'e' for encrypt or 'd' for decrypt.")
+
+#Якщо користувач вибрав шифр Віженера:
+elif cipher_type == 'v':
+    keyword = input("Enter keyword: ")
+
+    if action == 'e':
+        result = encrypt_vigenere(text, keyword)
+        print(f"Encrypted text: {result}")
+    elif action == 'd':
+        result = decrypt_vigenere(text, keyword)
+        print(f"Decrypted text: {result}")
